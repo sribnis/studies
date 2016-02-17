@@ -1,0 +1,14 @@
+  setvirtualenvproject ~/.virtualenvs/djangoenv ~/workspace/projects/Django/
+
+  workon djangoenv
+  cd FirstApp/mysite
+  pip install pymysql
+  
+  # в __init__.py приложения (INSTALLED_APPS) добавим:
+  import pymysql
+  pymysql.install_as_MySQLdb()
+ 
+  python manage.py migrate
+  runserver $IP:$PORT
+
+  
