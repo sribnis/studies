@@ -8,7 +8,8 @@
   import pymysql
   pymysql.install_as_MySQLdb()
  
+  mysql-ctl start
   python manage.py migrate
-  runserver $IP:$PORT
+  python manage.py runserver $IP:$PORT
 
   
